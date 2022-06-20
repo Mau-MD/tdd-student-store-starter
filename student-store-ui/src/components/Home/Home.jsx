@@ -1,4 +1,5 @@
 import * as React from "react";
+import Hero from "../Hero/Hero";
 import "./Home.css";
 
 export default function Home({
@@ -8,7 +9,7 @@ export default function Home({
 }) {
   return (
     <div className="home">
-      <p>Home</p>
+      <Hero />
     </div>
   );
 }
