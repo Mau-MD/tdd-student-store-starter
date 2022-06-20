@@ -21,6 +21,16 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [checkoutForm, setCheckoutForm] = useState([]);
 
+  const handleOnToggle = () => {};
+
+  const handleAddItemToCart = () => {};
+
+  const handleRemoveItemFromCart = () => {};
+
+  const handleOnCheckoutFormChange = () => {};
+
+  const handleOnSubmitCheckoutForm = () => {};
+
   return (
     <div className="app">
       <BrowserRouter>
