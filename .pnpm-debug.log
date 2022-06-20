@@ -1,0 +1,14 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+    "err": {
+      "name": "pnpm",
+      "message": "No package.json (or package.yaml, or package.json5) was found in \"/Users/maumd/Documents/dev/week2/tdd-student-store-starter\".",
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "stack": "pnpm: No package.json (or package.yaml, or package.json5) was found in \"/Users/maumd/Documents/dev/week2/tdd-student-store-starter\".\n    at readProjectManifest (/Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:20853:13)\n    at async Object.readProjectManifestOnly (/Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:20857:28)\n    at async readProjectManifestOnly (/Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:44020:24)\n    at async Object.handler (/Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:179659:24)\n    at async /Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:187855:21\n    at async run (/Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:187829:34)\n    at async runPnpm (/Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:188047:5)\n    at async /Users/maumd/.nvm/versions/node/v18.4.0/lib/node_modules/pnpm/dist/pnpm.cjs:188039:7"
+    }
+  }
+}
