@@ -3,7 +3,7 @@ import React from "react";
 const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
   return (
     <div className="shopping-cart">
-      {shoppingCart ? (
+      {shoppingCart && shoppingCart.length > 0 ? (
         shoppingCart.map((shoppingCartProduct) => (
           <div>
             <div className="card-product-name">test</div>

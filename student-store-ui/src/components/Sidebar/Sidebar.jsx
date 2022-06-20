@@ -18,7 +18,11 @@ export default function Sidebar({
       </button>
       {isOpen && (
         <div>
-          <ShoppingCart />
+          <ShoppingCart
+            isOpen={isOpen}
+            products={products}
+            shoppingCart={shoppingCart}
+          />
         </div>
       )}
     </section>
