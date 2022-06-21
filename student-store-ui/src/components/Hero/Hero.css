@@ -1,0 +1,17 @@
+.hero {
+  height: 400px;
+  width: 100%;
+}
+
+.intro {
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 1em;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
