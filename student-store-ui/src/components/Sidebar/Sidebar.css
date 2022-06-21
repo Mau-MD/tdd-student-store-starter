@@ -1,0 +1,18 @@
+.sidebar {
+  background-color: #e5e7eb;
+  min-width: 100px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-button {
+  background-color: #f9fafb;
+  padding: 1em 2em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.active {
+  min-width: 350px;
+}
