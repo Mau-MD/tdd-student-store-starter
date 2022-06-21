@@ -16,18 +16,20 @@ export default function Home({
   return (
     <div className="home">
       <Hero />
-      <div className="top-row">
-        <Categories />
-        <Searchbar />
+      <div className="home-container">
+        <div className="top-row">
+          <Categories />
+          <Searchbar />
+        </div>
+        <ProductGrid
+          products={products}
+          handleAddItemToCart={handleAddItemToCart}
+          handleRemoveItemToCart={handleRemoveItemToCart}
+        />
+        <About />
+        <Contact />
+        <Footer />
       </div>
-      <ProductGrid
-        products={products}
-        handleAddItemToCart={handleAddItemToCart}
-        handleRemoveItemToCart={handleRemoveItemToCart}
-      />
-      <About />
-      <Contact />
-      <Footer />
     </div>
   );
 }
