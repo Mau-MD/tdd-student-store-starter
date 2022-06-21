@@ -12,7 +12,51 @@ import { useState } from "react";
 export default function App() {
   // State
 
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([
+    {
+      name: "test",
+      price: 1,
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      image:
+        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
+    },
+    {
+      name: "test",
+      price: 1,
+      description: "cool",
+      image:
+        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
+    },
+    {
+      name: "test",
+      price: 1,
+      description: "cool",
+      image:
+        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
+    },
+    {
+      name: "test",
+      price: 1,
+      description: "cool",
+      image:
+        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
+    },
+    {
+      name: "test",
+      price: 1,
+      description: "cool",
+      image:
+        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
+    },
+    {
+      name: "test",
+      price: 1,
+      description: "cool",
+      image:
+        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
+    },
+  ]);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
