@@ -1,4 +1,6 @@
 import React from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import "./ShoppingCart.css";
 
 const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
   return (
@@ -14,7 +16,8 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
         ))
       ) : (
         <div className="notification">
-          No items added to cart yet. Start shopping now!
+          <AiOutlineShoppingCart size={40} />
+          <p>No items added to cart yet. Start shopping now!</p>
         </div>
       )}
     </div>
