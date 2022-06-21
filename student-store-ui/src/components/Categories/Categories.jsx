@@ -6,8 +6,8 @@ const Categories = () => {
   return (
     <div class="categories-container">
       <Badge label={"Food"} isActive />
-      <Badge label={"Food"} isActive />
-      <Badge label={"Food"} />
+      <Badge label={"Cars"} />
+      <Badge label={"Technology"} />
       <Badge label={"Food"} />
     </div>
   );
