@@ -1,5 +1,6 @@
 import * as React from "react";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./Sidebar.css";
 
 export default function Sidebar({
@@ -14,7 +15,7 @@ export default function Sidebar({
   return (
     <section className="sidebar">
       <button className="toggle-button" onClick={() => handleOnToggle()}>
-        Toggle
+        <GiHamburgerMenu size={20} />
       </button>
       {isOpen && (
         <div>

@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #e5e7eb;
+  background-color: #ffebeb;
   min-width: 100px;
   padding: 1em;
   display: flex;
@@ -7,8 +7,8 @@
 }
 
 .toggle-button {
-  background-color: #f9fafb;
-  padding: 1em 2em;
+  background-color: #ffebeb;
+  padding: 0.5em;
   cursor: pointer;
   border-radius: 4px;
 }
