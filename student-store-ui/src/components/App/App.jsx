@@ -116,11 +116,13 @@ export default function App() {
       return product;
     });
 
+    console.log("shouldRemoveItem", shouldRemoveItem);
     // Filter the array to remove the item
     if (shouldRemoveItem) {
       const filteredShoppingCart = shoppingCart.filter(
-        (product) => product !== productId
+        (product) => product.itemId !== productId
       );
+
       setShoppingCart(filteredShoppingCart);
       return;
     }
