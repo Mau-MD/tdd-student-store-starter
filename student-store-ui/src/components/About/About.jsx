@@ -15,6 +15,8 @@ const About = () => {
         <img
           className="about-image"
           src="http://localhost:3000/src/assets/hero.jpg"
+          alt="About Us"
+          title="About Us"
         />
       </div>
     </div>

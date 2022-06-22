@@ -1,5 +1,5 @@
 .badge {
-  background-color: #dab2b2;
+  background-color: #eb9191;
   border-radius: 10px;
   color: white;
   width: fit-content;
@@ -8,5 +8,5 @@
 }
 
 .active-badge {
-  background-color: #f47f7f;
+  background-color: #9e5252;
 }

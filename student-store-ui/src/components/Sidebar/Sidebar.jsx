@@ -15,7 +15,11 @@ export default function Sidebar({
   const sidebarActiveClassName = isOpen ? "sidebar active" : "sidebar";
   return (
     <section className={sidebarActiveClassName}>
-      <button className="toggle-button" onClick={() => handleOnToggle()}>
+      <button
+        className="toggle-button"
+        onClick={() => handleOnToggle()}
+        aria-label="Toggle Button"
+      >
         <GiHamburgerMenu size={20} />
       </button>
       {isOpen && (

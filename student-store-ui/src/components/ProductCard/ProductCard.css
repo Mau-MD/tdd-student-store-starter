@@ -44,7 +44,7 @@
   width: 100%;
   padding: 1em;
   border-radius: 4px 0 0 4px;
-  background-color: #dab2b2;
+  background-color: #eb9191;
   color: white;
   cursor: pointer;
   transition: all 0.3s;
@@ -58,7 +58,7 @@
   width: 100%;
   padding: 1em;
   border-radius: 0 4px 4px 0;
-  background-color: #dab2b2;
+  background-color: #eb9191;
   color: white;
   cursor: pointer;
   transition: all 0.3s;

@@ -24,9 +24,6 @@ const Contact = () => {
           <div>Icon 3</div>
         </div>
       </div>
-      <div className="contact-image-container">
-        <img className="contact-image" />
-      </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const ProductCard = ({
     <div className="product-card">
       <div className="product-img-container">
         <Link to={`/products/${productId}`}>
-          <img src={product.image} alt={product.name} />
+          <img src={product.image} alt={product.name} title={product.name} />
         </Link>
       </div>
       <div className="product-name">{product.name}</div>
