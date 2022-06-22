@@ -4,7 +4,7 @@ import "./ProductCard.css";
 
 const ProductCard = ({
   product,
-  productId = 0,
+  productId,
   quantity = 0,
   handleAddItemToCart,
   handleRemoveItemToCart,
@@ -23,15 +23,15 @@ const ProductCard = ({
         <div className="product-description">{product.description}</div>
       )}
       <div className="product-buttons-container">
-        <button className="add" onClick={() => handleAddItemToCart(productId)}>
-          Add
-        </button>
-        <div className="product-quantity">{quantity}</div>
         <button
           className="remove"
           onClick={() => handleRemoveItemToCart(productId)}
         >
           Remove
+        </button>
+        <div className="product-quantity">{quantity}</div>
+        <button className="add" onClick={() => handleAddItemToCart(productId)}>
+          Add
         </button>
       </div>
     </div>

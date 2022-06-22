@@ -12,8 +12,8 @@ const ProductGrid = ({
       {products &&
         products.map((product) => (
           <ProductCard
-            showDescription
             product={product}
+            productId={product.id}
             handleAddItemToCart={handleAddItemToCart}
             handleRemoveItemToCart={handleRemoveItemToCart}
           />
