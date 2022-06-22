@@ -17,27 +17,31 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
     <div className="shopping-cart">
       <p className="shopping-cart-products-heading">Shopping Cart Products</p>
       <table>
-        <tr>
-          <th>Name</th>
-          <th>Quantity</th>
-          <th>Individual Price</th>
-          <th>Total</th>
-        </tr>
         {shoppingCartProducts && shoppingCartProducts.length > 0 ? (
-          shoppingCartProducts.map((shoppingCartProduct) => (
-            <tr className="card-product-container">
-              <td className="card-product-name">{shoppingCartProduct.name}</td>
-              <td className="card-product-quantity">
-                {shoppingCartProduct.quantity}
-              </td>
-              <td className="card-product-price">
-                ${shoppingCartProduct.price}
-              </td>
-              <td className="card-product-price">
-                ${shoppingCartProduct.price * shoppingCartProduct.quantity}
-              </td>
+          <>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Individual Price</th>
+              <th>Total</th>
             </tr>
-          ))
+            {shoppingCartProducts.map((shoppingCartProduct) => (
+              <tr className="card-product-container">
+                <td className="card-product-name">
+                  {shoppingCartProduct.name}
+                </td>
+                <td className="card-product-quantity">
+                  {shoppingCartProduct.quantity}
+                </td>
+                <td className="card-product-price">
+                  ${shoppingCartProduct.price}
+                </td>
+                <td className="card-product-price">
+                  ${shoppingCartProduct.price * shoppingCartProduct.quantity}
+                </td>
+              </tr>
+            ))}
+          </>
         ) : (
           <div className="notification">
             <AiOutlineShoppingCart size={40} />

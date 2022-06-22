@@ -5,7 +5,7 @@ import "./ProductCard.css";
 const ProductCard = ({
   product,
   productId,
-  quantity = 0,
+  quantity,
   handleAddItemToCart,
   handleRemoveItemToCart,
   showDescription,

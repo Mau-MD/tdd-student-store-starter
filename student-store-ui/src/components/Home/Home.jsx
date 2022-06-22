@@ -10,6 +10,7 @@ import "./Home.css";
 
 export default function Home({
   products,
+  shoppingCart,
   handleAddItemToCart,
   handleRemoveItemToCart,
 }) {
@@ -23,6 +24,7 @@ export default function Home({
         </div>
         <ProductGrid
           products={products}
+          shoppingCart={shoppingCart}
           handleAddItemToCart={handleAddItemToCart}
           handleRemoveItemToCart={handleRemoveItemToCart}
         />

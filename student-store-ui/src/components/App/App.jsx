@@ -116,7 +116,6 @@ export default function App() {
       return product;
     });
 
-    console.log("shouldRemoveItem", shouldRemoveItem);
     // Filter the array to remove the item
     if (shouldRemoveItem) {
       const filteredShoppingCart = shoppingCart.filter(
@@ -162,6 +161,7 @@ export default function App() {
                 element={
                   <Home
                     products={products}
+                    shoppingCart={shoppingCart}
                     handleAddItemToCart={handleAddItemToCart}
                     handleRemoveItemToCart={handleRemoveItemFromCart}
                   />
