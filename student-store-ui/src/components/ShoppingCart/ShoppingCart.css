@@ -1,3 +1,7 @@
+.shopping-cart {
+  /* width: 500px; */
+}
+
 .notification {
   display: flex;
   flex-direction: column;

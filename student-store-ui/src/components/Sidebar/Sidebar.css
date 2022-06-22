@@ -1,10 +1,11 @@
 .sidebar {
   background-color: #ffebeb;
-  width: 100px;
+  min-width: 100px;
   padding: 1em;
   display: flex;
   flex-direction: column;
   transition: all 0.3s;
+  flex: 1;
 }
 
 .toggle-button {
@@ -15,6 +16,6 @@
 }
 
 .active {
-  width: 350px;
+  min-width: 500px;
   transition: all 0.3s;
 }
