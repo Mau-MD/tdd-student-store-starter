@@ -12,8 +12,9 @@ export default function Sidebar({
   handleOnSubmitCheckoutForm,
   handleOnToggle,
 }) {
+  const sidebarActiveClassName = isOpen ? "sidebar active" : "sidebar";
   return (
-    <section className="sidebar">
+    <section className={sidebarActiveClassName}>
       <button className="toggle-button" onClick={() => handleOnToggle()}>
         <GiHamburgerMenu size={20} />
       </button>
