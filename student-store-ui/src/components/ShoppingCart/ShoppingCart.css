@@ -1,5 +1,16 @@
-.shopping-cart {
-  /* width: 500px; */
+.shopping-cart-products-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.shopping-cart table {
+  width: 100%;
+}
+.shopping-cart td,
+.shopping-cart th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 .notification {
