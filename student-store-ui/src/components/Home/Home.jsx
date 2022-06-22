@@ -28,8 +28,8 @@ export default function Home({
         />
         <About />
         <Contact />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

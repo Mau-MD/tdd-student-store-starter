@@ -1,0 +1,21 @@
+.contact-container {
+  background-color: #dab2b2;
+  color: white;
+  padding: 2em;
+  margin: 2em 0;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.contact-label {
+  display: flex;
+  gap: 3em;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1em;
+}
