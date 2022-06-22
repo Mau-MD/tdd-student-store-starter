@@ -10,6 +10,7 @@ import "./Home.css";
 
 export default function Home({
   products,
+  handleSearch,
   shoppingCart,
   handleAddItemToCart,
   handleRemoveItemToCart,
@@ -20,7 +21,7 @@ export default function Home({
       <div className="home-container">
         <div className="top-row">
           <Categories />
-          <Searchbar />
+          <Searchbar handleSearch={handleSearch} />
         </div>
         <ProductGrid
           products={products}

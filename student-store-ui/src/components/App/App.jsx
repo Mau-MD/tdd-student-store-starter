@@ -15,6 +15,7 @@ export default function App() {
   // State
 
   const [products, setProducts] = useState([]);
+  const [apiProducts, setApiProducts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,7 @@ export default function App() {
       const productsData = await axios.get(
         "https://codepath-store-api.herokuapp.com/store"
       );
+      setApiProducts(productsData.data.products);
       setProducts(productsData.data.products);
     } catch {
       setError(true);
@@ -108,6 +110,13 @@ export default function App() {
     //TODO
   };
 
+  const handleSearch = (query) => {
+    const filteredItems = apiProducts.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setProducts(filteredItems);
+  };
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -140,6 +149,7 @@ export default function App() {
                     path="/"
                     element={
                       <Home
+                        handleSearch={handleSearch}
                         products={products}
                         shoppingCart={shoppingCart}
                         handleAddItemToCart={handleAddItemToCart}
