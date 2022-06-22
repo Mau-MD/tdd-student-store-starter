@@ -6,63 +6,15 @@ import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import NotFound from "../NotFound/NotFound";
 import ProductDetail from "../ProductDetail/ProductDetail";
+import axios from "axios";
+import ReactLoading from "react-loading";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
   // State
 
-  const [products, setProducts] = useState([
-    {
-      id: 0,
-      name: "Product 1",
-      price: 20,
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      image:
-        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
-    },
-    {
-      id: 1,
-      name: "Product 2",
-      price: 12,
-      description: "cool",
-      image:
-        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
-    },
-    {
-      id: 2,
-      name: "Product 3",
-      price: 1222,
-      description: "cool",
-      image:
-        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
-    },
-    {
-      id: 3,
-      name: "Product 4",
-      price: 140,
-      description: "cool",
-      image:
-        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
-    },
-    {
-      id: 4,
-      name: "Product 5",
-      price: 40,
-      description: "cool",
-      image:
-        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
-    },
-    {
-      id: 5,
-      name: "Product 6",
-      price: 1,
-      description: "cool",
-      image:
-        "https://www.junglescout.com/wp-content/uploads/2021/01/product-photo-water-bottle-hero.png",
-    },
-  ]);
+  const [products, setProducts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -71,6 +23,23 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [checkoutForm, setCheckoutForm] = useState({});
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  const getProducts = async () => {
+    setIsFetching(true);
+    try {
+      const productsData = await axios.get(
+        "https://codepath-store-api.herokuapp.com/store"
+      );
+      setProducts(productsData.data.products);
+    } catch {
+      setError(true);
+    }
+    setIsFetching(false);
+  };
 
   const handleOnToggle = () => {
     setIsOpen(!isOpen);
@@ -146,30 +115,46 @@ export default function App() {
           {/* YOUR CODE HERE! */}
           <Navbar />
           <div className="main-container">
-            <Sidebar
-              isOpen={isOpen}
-              shoppingCart={shoppingCart}
-              products={products}
-              checkoutForm={checkoutForm}
-              handleOnSubmitFormChange={handleOnCheckoutFormChange}
-              handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
-              handleOnToggle={handleOnToggle}
-            />
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Home
-                    products={products}
-                    shoppingCart={shoppingCart}
-                    handleAddItemToCart={handleAddItemToCart}
-                    handleRemoveItemToCart={handleRemoveItemFromCart}
+            {isFetching ? (
+              <div className="loading-container">
+                <ReactLoading
+                  height={"50px"}
+                  width={"50px"}
+                  color={"#9E5252"}
+                  type={"spin"}
+                />
+              </div>
+            ) : (
+              <>
+                <Sidebar
+                  isOpen={isOpen}
+                  shoppingCart={shoppingCart}
+                  products={products}
+                  checkoutForm={checkoutForm}
+                  handleOnSubmitFormChange={handleOnCheckoutFormChange}
+                  handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+                  handleOnToggle={handleOnToggle}
+                />
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <Home
+                        products={products}
+                        shoppingCart={shoppingCart}
+                        handleAddItemToCart={handleAddItemToCart}
+                        handleRemoveItemToCart={handleRemoveItemFromCart}
+                      />
+                    }
                   />
-                }
-              />
-              <Route path="/products/:productId" element={<ProductDetail />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+                  <Route
+                    path="/products/:productId"
+                    element={<ProductDetail />}
+                  />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </>
+            )}
           </div>
         </main>
       </BrowserRouter>
