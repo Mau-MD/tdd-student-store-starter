@@ -19,6 +19,7 @@ export default function App() {
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   // type => {itemId, quantity}
   const [shoppingCart, setShoppingCart] = useState([]);
@@ -110,11 +111,25 @@ export default function App() {
     //TODO
   };
 
-  const handleSearch = (query) => {
-    const filteredItems = apiProducts.filter((product) =>
+  const searchItems = (query) => {
+    return apiProducts.filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())
     );
+  };
+
+  const handleSearch = (query) => {
+    const filteredItems = searchItems(query);
     setProducts(filteredItems);
+  };
+
+  const handleCategoryChange = (category, query) => {
+    // We need to filter both category and query
+    setSelectedCategory(category);
+    const filteredItems = searchItems(query);
+    const finalFilteredItems = filteredItems.filter(
+      (item) => item.category === category
+    );
+    setProducts(finalFilteredItems);
   };
 
   return (

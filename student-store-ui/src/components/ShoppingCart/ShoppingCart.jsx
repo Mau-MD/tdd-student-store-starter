@@ -13,12 +13,17 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
     return { ...product, quantity: cartProduct.quantity };
   });
 
+  const total = shoppingCartProducts
+    .reduce((prev, curr) => prev + curr.price * curr.quantity, 0)
+    .toFixed(2);
+
   return (
     <div className="shopping-cart">
       <p className="shopping-cart-products-heading">Shopping Cart Products</p>
-      <table>
-        {shoppingCartProducts && shoppingCartProducts.length > 0 ? (
-          <>
+      {/* <table> */}
+      {shoppingCartProducts && shoppingCartProducts.length > 0 ? (
+        <>
+          <table>
             <tr>
               <th>Name</th>
               <th>Quantity</th>
@@ -37,18 +42,29 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
                   ${shoppingCartProduct.price}
                 </td>
                 <td className="card-product-price">
-                  ${shoppingCartProduct.price * shoppingCartProduct.quantity}
+                  $
+                  {(
+                    shoppingCartProduct.price * shoppingCartProduct.quantity
+                  ).toFixed(2)}
                 </td>
               </tr>
             ))}
-          </>
-        ) : (
-          <div className="notification">
-            <AiOutlineShoppingCart size={40} />
-            <p>No items added to cart yet. Start shopping now!</p>
+          </table>
+          <div className="subtotal">
+            <span className="subtotal-heading">Subtotal:</span>${total}
           </div>
-        )}
-      </table>
+          <div className="total-price">
+            <span className="total-heading">Total (8.75% TAX):</span>$
+            {(total * 1.0875).toFixed(2)}
+          </div>
+        </>
+      ) : (
+        <div className="notification">
+          <AiOutlineShoppingCart size={40} />
+          <p>No items added to cart yet. Start shopping now!</p>
+        </div>
+      )}
+      {/* </table> */}
     </div>
   );
 };

@@ -1,14 +1,14 @@
 import React from "react";
 import Badge from "../Badge/Badge";
 import "./Categories.css";
+import { categories } from "../../util/constants";
 
-const Categories = () => {
+const Categories = ({ handleCategoryChange, selectedCategory }) => {
   return (
-    <div class="categories-container">
-      <Badge label={"Food"} isActive />
-      <Badge label={"Cars"} />
-      <Badge label={"Technology"} />
-      <Badge label={"Food"} />
+    <div className="categories-container">
+      {categories.map((category) => (
+        <Badge label={category.label} />
+      ))}
     </div>
   );
 };
