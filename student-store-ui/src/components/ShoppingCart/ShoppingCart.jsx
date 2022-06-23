@@ -20,7 +20,6 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
   return (
     <div className="shopping-cart">
       <p className="shopping-cart-products-heading">Shopping Cart Products</p>
-      {/* <table> */}
       {shoppingCartProducts && shoppingCartProducts.length > 0 ? (
         <>
           <table>
@@ -64,7 +63,6 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
           <p>No items added to cart yet. Start shopping now!</p>
         </div>
       )}
-      {/* </table> */}
     </div>
   );
 };

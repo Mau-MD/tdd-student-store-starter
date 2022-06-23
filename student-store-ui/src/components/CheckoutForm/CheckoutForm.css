@@ -1,0 +1,22 @@
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.checkout-form-input {
+  padding: 0.5em 1em;
+}
+
+.checkout-button {
+  background-color: #9e5252;
+  color: white;
+  cursor: pointer;
+  padding: 1em;
+  transition: all 0.3s;
+}
+
+.checkout-button:hover {
+  transform: scale(1.02);
+}

@@ -24,7 +24,7 @@ export default function App() {
   // type => {itemId, quantity}
   const [shoppingCart, setShoppingCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [checkoutForm, setCheckoutForm] = useState({});
+  const [checkoutForm, setCheckoutForm] = useState({ name: "", email: "" });
 
   useEffect(() => {
     getProducts();
@@ -155,7 +155,7 @@ export default function App() {
                   shoppingCart={shoppingCart}
                   products={products}
                   checkoutForm={checkoutForm}
-                  handleOnSubmitFormChange={handleOnCheckoutFormChange}
+                  handleOnCheckoutFormChange={handleOnCheckoutFormChange}
                   handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
                   handleOnToggle={handleOnToggle}
                 />
