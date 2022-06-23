@@ -119,6 +119,8 @@ export default function App() {
           shoppingCart,
         }
       );
+      setShoppingCart([]);
+      setCheckoutForm({ name: "", email: "" });
       return productsData;
     } catch (err) {
       return null;
