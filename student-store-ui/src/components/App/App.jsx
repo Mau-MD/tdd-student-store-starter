@@ -107,8 +107,22 @@ export default function App() {
     });
   };
 
-  const handleOnSubmitCheckoutForm = () => {
-    //TODO
+  const handleOnSubmitCheckoutForm = async () => {
+    try {
+      const productsData = await axios.post(
+        "https://codepath-store-api.herokuapp.com/store",
+        {
+          user: {
+            name: checkoutForm.name,
+            email: checkoutForm.email,
+          },
+          shoppingCart,
+        }
+      );
+      return productsData;
+    } catch (err) {
+      return null;
+    }
   };
 
   const searchItems = (query) => {

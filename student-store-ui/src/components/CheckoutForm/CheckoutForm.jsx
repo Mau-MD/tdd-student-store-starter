@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CheckoutForm.css";
 
 const CheckoutForm = ({
@@ -8,6 +8,26 @@ const CheckoutForm = ({
   handleOnCheckoutFormChange,
   handleOnSubmitCheckoutForm,
 }) => {
+  // toBeSubmitted, success, error
+  const [state, setState] = useState("toBeSubmitted");
+
+  const handleSubmit = async () => {
+    const res = await handleOnSubmitCheckoutForm();
+    if (res === null) {
+      setState("error");
+      return;
+    }
+    setState("success");
+  };
+
+  const renderFeedbackMessage = () => {
+    if (state === "success") return <div className="success">Success!</div>;
+    if (state === "error")
+      return (
+        <div className="error">There was an error processing your request</div>
+      );
+  };
+
   return (
     <div className="checkout-form">
       <input
@@ -26,9 +46,10 @@ const CheckoutForm = ({
         onChange={(e) => handleOnCheckoutFormChange("name", e.target.value)}
         className="checkout-form-input"
       />
-      <button className="checkout-button" onClick={handleOnSubmitCheckoutForm}>
+      <button className="checkout-button" onClick={() => handleSubmit()}>
         Checkout
       </button>
+      {renderFeedbackMessage()}
     </div>
   );
 };
