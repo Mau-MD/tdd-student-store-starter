@@ -153,7 +153,6 @@ export default function App() {
     const finalFilteredItems = filteredItems.filter(
       (item) => item.category === category
     );
-    console.log(filteredItems, finalFilteredItems);
     setProducts(finalFilteredItems);
   };
 
