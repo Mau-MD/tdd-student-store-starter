@@ -1,10 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getQuantityFromShoppingCart } from "../ProductGrid/ProductGrid";
 import ProductView from "../ProductView/ProductView";
 import "./ProductDetail.css";
 
-const ProductDetail = ({ handleAddItemToCart, handleRemoveItemToCart }) => {
+const ProductDetail = ({
+  handleAddItemToCart,
+  handleRemoveItemToCart,
+  shoppingCart,
+}) => {
   const { productId } = useParams();
 
   const [product, setProduct] = useState();
@@ -36,8 +41,13 @@ const ProductDetail = ({ handleAddItemToCart, handleRemoveItemToCart }) => {
     if (isLoading) return <h1 className="loading">Loading...</h1>;
     return (
       <div>
-        <ProductView product={product} productId={product.id} quantity={0} />
-        <pre>{JSON.stringify(product)}</pre>
+        <ProductView
+          product={product}
+          productId={product.id}
+          quantity={getQuantityFromShoppingCart(shoppingCart, product.id)}
+          handleAddItemToCart={handleAddItemToCart}
+          handleRemoveItemToCart={handleRemoveItemToCart}
+        />
       </div>
     );
   };

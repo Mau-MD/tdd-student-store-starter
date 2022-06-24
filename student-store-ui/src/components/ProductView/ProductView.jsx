@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
+import "./ProductView.css";
 
 const ProductView = ({
   product,
@@ -14,8 +15,11 @@ const ProductView = ({
       <ProductCard
         product={product}
         productId={productId}
-        quantity={0}
+        quantity={quantity}
+        handleAddItemToCart={handleAddItemToCart}
+        handleRemoveItemToCart={handleRemoveItemToCart}
         showDescription
+        isBig
       />
     </div>
   );

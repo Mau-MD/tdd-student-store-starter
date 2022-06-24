@@ -199,7 +199,13 @@ export default function App() {
                   />
                   <Route
                     path="/products/:productId"
-                    element={<ProductDetail />}
+                    element={
+                      <ProductDetail
+                        shoppingCart={shoppingCart}
+                        handleAddItemToCart={handleAddItemToCart}
+                        handleRemoveItemToCart={handleRemoveItemFromCart}
+                      />
+                    }
                   />
                   <Route path="*" element={<NotFound />} />
                 </Routes>

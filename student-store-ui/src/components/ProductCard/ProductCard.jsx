@@ -9,10 +9,14 @@ const ProductCard = ({
   handleAddItemToCart,
   handleRemoveItemToCart,
   showDescription,
+  isBig = false,
 }) => {
+  const imageClassName = !isBig
+    ? "product-img-container"
+    : "product-img-container-big";
   return (
     <div className="product-card">
-      <div className="product-img-container">
+      <div className={imageClassName}>
         <Link to={`/products/${productId}`}>
           <img src={product.image} alt={product.name} title={product.name} />
         </Link>

@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductGrid.css";
 
-function getQuantityFromShoppingCart(shoppingCart, itemId) {
+export function getQuantityFromShoppingCart(shoppingCart, itemId) {
   const item = shoppingCart.find(
     (cartProduct) => cartProduct.itemId === itemId
   );
