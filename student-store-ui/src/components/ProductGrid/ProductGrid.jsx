@@ -1,4 +1,5 @@
 import React from "react";
+import NotFound from "../NotFound/NotFound";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductGrid.css";
 
@@ -20,7 +21,7 @@ const ProductGrid = ({
 }) => {
   return (
     <div className="product-grid">
-      {products &&
+      {products && products.length > 0 ? (
         products.map((product) => (
           <ProductCard
             key={product.id}
@@ -30,7 +31,10 @@ const ProductGrid = ({
             handleAddItemToCart={handleAddItemToCart}
             handleRemoveItemToCart={handleRemoveItemToCart}
           />
-        ))}
+        ))
+      ) : (
+        <NotFound />
+      )}
     </div>
   );
 };
