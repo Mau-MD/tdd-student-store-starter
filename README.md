@@ -37,7 +37,7 @@ The following specifications were met on the Express backend and the React front
 
 **App.jsx**
 
-- [ ] The core App component that contains the routes for the app and does the initial data fetching
+- [x] The core App component that contains the routes for the app and does the initial data fetching
 - [x] Renders a `BrowserRouter` component that contains a `Routes` component with the following routes:
   - [x] `/` - Should render the `Home.jsx` component
   - [x] `/products/:productId` - should render the `ProductDetail` component
@@ -113,7 +113,7 @@ The following specifications were met on the Express backend and the React front
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
 - [x] Should render the `Hero` component
-- [ ] Should render the `ProductGrid` component
+- [x] Should render the `ProductGrid` component
 
 **Hero.jsx**
 
@@ -128,7 +128,7 @@ The following specifications were met on the Express backend and the React front
   - `products` - an array of product objects
   - `handleAddItemToCart` - handler function defined in the `App.jsx` component
   - `handleRemoveItemToCart` - handler function defined in the `App.jsx` component
-- [ ] Should iterate over its `products` prop, rendering a `ProductCard` component for each one. Set the `showDescription` prop to `false` for all of the `ProductCard` components rendered in the `ProductGrid` component.
+- [x] Should iterate over its `products` prop, rendering a `ProductCard` component for each one. Set the `showDescription` prop to `false` for all of the `ProductCard` components rendered in the `ProductGrid` component.
 
 **ProductDetail.jsx**
 
@@ -142,19 +142,19 @@ The following specifications were met on the Express backend and the React front
   - [x] It should make a `GET` request to the `/store/:productId` endpoint with the `axios.get` method.
   - [x] The `:productId` part of the request should be replaced with the `productId` pulled from the url.
   - [x] When the initial request is loading, it should render an `h1` element with the `className` of `loading` and contain the text `"Loading..."`
-  - [ ] It should store the `product` received by the request in state and then render the `ProductView` component.
+  - [x] It should store the `product` received by the request in state and then render the `ProductView` component.
   - [x] If no `product` is found with that `id`, it should render the `NotFound` component
 
 **ProductView.jsx**
 
 - [x] Should render JSX that is wrapped by a `div` element with a `className` of `product-view`
-- [ ] Should accept **at least** the following props:
+- [x] Should accept **at least** the following props:
   - `product` - the `product` object returned by the API request
   - `productId` - the id of the product extracted from the url
   - `quantity` - the quantity for this product found in the `shoppingCart`
   - `handleAddItemToCart` - handler function
   - `handleRemoveItemToCart` - handler function -[X] It should display an `h1` element with the `className` of `product-id` that contains the text: `Product #` followed by the `productId` prop
-- [] It should render a `ProductCard` component and pass it the props it needs. It should also set the `showDescription` prop to `true` for this product card.
+- [x] It should render a `ProductCard` component and pass it the props it needs. It should also set the `showDescription` prop to `true` for this product card.
 
 **ProductCard.jsx**
 
