@@ -25,6 +25,7 @@ export default function App() {
   const [shoppingCart, setShoppingCart] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [checkoutForm, setCheckoutForm] = useState({ name: "", email: "" });
+  const [receipt, setReceipt] = useState(null);
 
   useEffect(() => {
     getProducts();
@@ -121,6 +122,7 @@ export default function App() {
       );
       setShoppingCart([]);
       setCheckoutForm({ name: "", email: "" });
+      setReceipt(productsData.data);
       return productsData;
     } catch (err) {
       return null;
@@ -181,6 +183,7 @@ export default function App() {
                   handleOnCheckoutFormChange={handleOnCheckoutFormChange}
                   handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
                   handleOnToggle={handleOnToggle}
+                  receipt={receipt}
                 />
                 <Routes>
                   <Route

@@ -3,6 +3,7 @@ import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Sidebar.css";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import Receipt from "../Receipt/Receipt";
 
 export default function Sidebar({
   isOpen,
@@ -12,6 +13,7 @@ export default function Sidebar({
   handleOnCheckoutFormChange,
   handleOnSubmitCheckoutForm,
   handleOnToggle,
+  receipt,
 }) {
   const sidebarActiveClassName = isOpen ? "sidebar active" : "sidebar";
   return (
@@ -36,7 +38,13 @@ export default function Sidebar({
             checkoutForm={checkoutForm}
             handleOnCheckoutFormChange={handleOnCheckoutFormChange}
             handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
+            receipt={receipt}
           />
+          {receipt && (
+            <div>
+              <Receipt receipt={receipt.purchase.receipt} />
+            </div>
+          )}
         </div>
       )}
     </section>

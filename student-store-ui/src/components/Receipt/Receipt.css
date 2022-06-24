@@ -1,0 +1,16 @@
+.receipt-container {
+  margin: 4em 0;
+}
+
+.receipt-user {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+}
+
+.receipt-lines {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

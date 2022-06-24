@@ -30,7 +30,10 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
               <th>Total</th>
             </tr>
             {shoppingCartProducts.map((shoppingCartProduct) => (
-              <tr className="card-product-container">
+              <tr
+                className="card-product-container"
+                key={shoppingCartProduct.productId}
+              >
                 <td className="card-product-name">
                   {shoppingCartProduct.name}
                 </td>
