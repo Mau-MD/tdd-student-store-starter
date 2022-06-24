@@ -287,20 +287,28 @@ The following specifications were met on the Express backend and the React front
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+I didn't feel unprepared. I think the project was challenging and fun.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+
+  If I had more time, I would definitely work more in refining and making better styles. Also would love to add some more animations.
 
 Add your response here
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I think almost everything went well. Had some problems regarding code structure, but asked my manager and everything went great!
 
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
+- [Axios](https://www.npmjs.com/package/axios)
+- [React Icons](https://www.npmjs.com/package/react-icons)
+- [React Router Dom](https://www.npmjs.com/package/react-router-dom)
+- [React Router Dom Hash Link](https://www.npmjs.com/package/react-router-hashlink)
+- [React Loading](https://www.npmjs.com/package/react-loading)
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Rodrigo taught me about React Router Dom Hash Link which is awesome! Also shot out to my Manager for helping me with some issues I had.
