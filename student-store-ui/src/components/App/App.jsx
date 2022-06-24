@@ -134,13 +134,13 @@ export default function App() {
   };
 
   const handleSearch = (query) => {
-    const filteredItems = searchItems(query);
-    setProducts(filteredItems);
+    handleCategoryChange("all", query);
   };
 
   const handleCategoryChange = (category, query) => {
     // We need to filter both category and query
     setSelectedCategory(category);
+
     const filteredItems = searchItems(query);
 
     if (category === "all") {
@@ -176,7 +176,7 @@ export default function App() {
                 <Sidebar
                   isOpen={isOpen}
                   shoppingCart={shoppingCart}
-                  products={products}
+                  products={apiProducts}
                   checkoutForm={checkoutForm}
                   handleOnCheckoutFormChange={handleOnCheckoutFormChange}
                   handleOnSubmitCheckoutForm={handleOnSubmitCheckoutForm}
