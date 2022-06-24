@@ -14,13 +14,18 @@ export default function Home({
   shoppingCart,
   handleAddItemToCart,
   handleRemoveItemToCart,
+  handleCategoryChange,
+  selectedCategory,
 }) {
   return (
     <div className="home">
       <Hero />
       <div className="home-container">
         <div className="top-row">
-          <Categories />
+          <Categories
+            handleCategoryChange={handleCategoryChange}
+            selectedCategory={selectedCategory}
+          />
           <Searchbar handleSearch={handleSearch} />
         </div>
         <ProductGrid

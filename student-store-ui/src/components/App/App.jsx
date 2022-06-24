@@ -142,9 +142,16 @@ export default function App() {
     // We need to filter both category and query
     setSelectedCategory(category);
     const filteredItems = searchItems(query);
+
+    if (category === "all") {
+      setProducts(filteredItems);
+      return;
+    }
+
     const finalFilteredItems = filteredItems.filter(
       (item) => item.category === category
     );
+    console.log(filteredItems, finalFilteredItems);
     setProducts(finalFilteredItems);
   };
 
@@ -185,6 +192,8 @@ export default function App() {
                         shoppingCart={shoppingCart}
                         handleAddItemToCart={handleAddItemToCart}
                         handleRemoveItemToCart={handleRemoveItemFromCart}
+                        handleCategoryChange={handleCategoryChange}
+                        selectedCategory={selectedCategory}
                       />
                     }
                   />

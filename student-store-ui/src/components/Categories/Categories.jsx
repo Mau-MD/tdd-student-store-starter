@@ -7,7 +7,11 @@ const Categories = ({ handleCategoryChange, selectedCategory }) => {
   return (
     <div className="categories-container">
       {categories.map((category) => (
-        <Badge label={category.label} />
+        <Badge
+          label={category.label}
+          onClick={() => handleCategoryChange(category.value, "")}
+          isActive={selectedCategory === category.value}
+        />
       ))}
     </div>
   );
