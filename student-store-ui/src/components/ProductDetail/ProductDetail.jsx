@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { baseUrl } from "../../util/constants";
 import { getQuantityFromShoppingCart } from "../ProductGrid/ProductGrid";
 import ProductView from "../ProductView/ProductView";
 import "./ProductDetail.css";
@@ -24,9 +25,7 @@ const ProductDetail = ({
   const fetchProductFromId = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(
-        `https://codepath-store-api.herokuapp.com/store/${productId}`
-      );
+      const response = await axios.get(`${baseUrl}/store/${productId}`);
 
       setProduct(response.data.product);
     } catch (err) {

@@ -5,3 +5,8 @@ export const categories = [
   { label: "Tech", value: "tech" },
   { label: "Accessories", value: "accessories" },
 ];
+
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://codepath-store-api.herokuapp.com"
+    : "localhost:3001";

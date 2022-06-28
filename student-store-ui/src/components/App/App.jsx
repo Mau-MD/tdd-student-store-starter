@@ -10,6 +10,7 @@ import axios from "axios";
 import ReactLoading from "react-loading";
 
 import { useState, useEffect } from "react";
+import { baseUrl } from "../../util/constants";
 
 export default function App() {
   // State
@@ -34,9 +35,7 @@ export default function App() {
   const getProducts = async () => {
     setIsFetching(true);
     try {
-      const productsData = await axios.get(
-        "https://codepath-store-api.herokuapp.com/store"
-      );
+      const productsData = await axios.get(`${baseUrl}/store`);
       setApiProducts(productsData.data.products);
       setProducts(productsData.data.products);
     } catch {
@@ -110,16 +109,13 @@ export default function App() {
 
   const handleOnSubmitCheckoutForm = async () => {
     try {
-      const productsData = await axios.post(
-        "https://codepath-store-api.herokuapp.com/store",
-        {
-          user: {
-            name: checkoutForm.name,
-            email: checkoutForm.email,
-          },
-          shoppingCart,
-        }
-      );
+      const productsData = await axios.post(`${baseUrl}/store`, {
+        user: {
+          name: checkoutForm.name,
+          email: checkoutForm.email,
+        },
+        shoppingCart,
+      });
       setShoppingCart([]);
       setCheckoutForm({ name: "", email: "" });
       setReceipt(productsData.data);
