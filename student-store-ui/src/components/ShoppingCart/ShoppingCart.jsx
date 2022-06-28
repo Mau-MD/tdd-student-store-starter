@@ -23,34 +23,36 @@ const ShoppingCart = ({ isOpen, products, shoppingCart }) => {
       {shoppingCartProducts && shoppingCartProducts.length > 0 ? (
         <>
           <table>
-            <tr>
-              <th>Name</th>
-              <th>Quantity</th>
-              <th>Individual Price</th>
-              <th>Total</th>
-            </tr>
-            {shoppingCartProducts.map((shoppingCartProduct) => (
-              <tr
-                className="card-product-container"
-                key={shoppingCartProduct.productId}
-              >
-                <td className="card-product-name">
-                  {shoppingCartProduct.name}
-                </td>
-                <td className="card-product-quantity">
-                  {shoppingCartProduct.quantity}
-                </td>
-                <td className="card-product-price">
-                  ${shoppingCartProduct.price}
-                </td>
-                <td className="card-product-price">
-                  $
-                  {(
-                    shoppingCartProduct.price * shoppingCartProduct.quantity
-                  ).toFixed(2)}
-                </td>
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Individual Price</th>
+                <th>Total</th>
               </tr>
-            ))}
+              {shoppingCartProducts.map((shoppingCartProduct) => (
+                <tr
+                  className="card-product-container"
+                  key={shoppingCartProduct.productId}
+                >
+                  <td className="card-product-name">
+                    {shoppingCartProduct.name}
+                  </td>
+                  <td className="card-product-quantity">
+                    {shoppingCartProduct.quantity}
+                  </td>
+                  <td className="card-product-price">
+                    ${shoppingCartProduct.price}
+                  </td>
+                  <td className="card-product-price">
+                    $
+                    {(
+                      shoppingCartProduct.price * shoppingCartProduct.quantity
+                    ).toFixed(2)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
           <div className="subtotal">
             <span className="subtotal-heading">Subtotal:</span>${total}

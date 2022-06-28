@@ -204,6 +204,40 @@
           "Total (including taxes): $8.42"
         ]
       }
+    },
+    {
+      "id": 3,
+      "name": "hola",
+      "email": "hola@fb.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 3
+        },
+        {
+          "itemId": 2,
+          "quantity": 6
+        },
+        {
+          "itemId": 3,
+          "quantity": 4
+        }
+      ],
+      "total": "26.02",
+      "createdAt": "2022-06-28T21:05:27.776Z",
+      "receipt": {
+        "userInfo": {
+          "name": "hola",
+          "email": "hola@fb.com"
+        },
+        "lines": [
+          "Bought 3 Rice Krispies for $2.97",
+          "Bought 6 Flamin Hot Cheetos for $9.00",
+          "Bought 4 Cinnamon Rolls for $11.96",
+          "Subtotal: $23.93",
+          "Total (including taxes): $26.02"
+        ]
+      }
     }
   ]
 }

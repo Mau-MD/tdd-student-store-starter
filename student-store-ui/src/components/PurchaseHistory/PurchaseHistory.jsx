@@ -17,6 +17,7 @@ const PurchaseHistory = ({ purchases, handlePurchaseSearch }) => {
         {purchases &&
           purchases.map((purchase) => (
             <div
+              key={purchase.id}
               className="purchase-card"
               onClick={() => navigate(`/purchases/${purchase.id}`)}
             >
