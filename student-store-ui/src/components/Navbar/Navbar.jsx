@@ -23,6 +23,11 @@ export default function Navbar() {
             Contact
           </HashLink>
         </li>
+        <li>
+          <HashLink smooth to="/purchases">
+            Order History
+          </HashLink>
+        </li>
       </ul>
     </nav>
   );

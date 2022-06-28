@@ -1,0 +1,42 @@
+.purchase-detail-container {
+  width: 100%;
+  height: 95vh;
+  padding: 6em;
+}
+
+.purchase-detail-loading-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purchase-detail-lines {
+  margin: 4em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.purchase-detail-lines > p:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .purchase-detail-container {
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .purchase-detail-container {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .purchase-detail-container {
+    padding: 0;
+  }
+}
