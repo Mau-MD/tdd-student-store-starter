@@ -145,5 +145,126 @@
       "price": 999.99
     }
   ],
-  "purchases": []
+  "purchases": [
+    {
+      "id": 1,
+      "name": "Mau",
+      "email": "maumd@fb.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 10
+        },
+        {
+          "itemId": 4,
+          "quantity": 3
+        }
+      ],
+      "total": "21.37",
+      "createdAt": "2022-06-28T17:01:03.589Z",
+      "receipt": [
+        "Receipt for Mau with email: maumd@fb.com",
+        "Bought 10 Rice Krispies for $9.90",
+        "Bought 3 Coconut Water for $9.75",
+        "Subtotal: $19.65",
+        "Total (including taxes): $21.37"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Mau",
+      "email": "maumd@fb.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 10
+        },
+        {
+          "itemId": 4,
+          "quantity": 3
+        }
+      ],
+      "total": "21.37",
+      "createdAt": "2022-06-28T17:01:14.365Z",
+      "receipt": [
+        "Receipt for Mau with email: maumd@fb.com",
+        "Bought 10 Rice Krispies for $9.90",
+        "Bought 3 Coconut Water for $9.75",
+        "Subtotal: $19.65",
+        "Total (including taxes): $21.37"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Mau",
+      "email": "maumd@fb.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 10
+        },
+        {
+          "itemId": 14,
+          "quantity": 3
+        }
+      ],
+      "total": "369.64",
+      "createdAt": "2022-06-28T17:02:17.704Z",
+      "receipt": [
+        "Receipt for Mau with email: maumd@fb.com",
+        "Bought 10 Rice Krispies for $9.90",
+        "Bought 3 Keyboard for $330.00",
+        "Subtotal: $339.90",
+        "Total (including taxes): $369.64"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mau",
+      "email": "maumd@fb.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 10
+        },
+        {
+          "itemId": 14,
+          "quantity": 3
+        }
+      ],
+      "total": "369.64",
+      "createdAt": "2022-06-28T17:03:45.419Z",
+      "receipt": [
+        "Receipt for Mau with email: maumd@fb.com",
+        "Bought 10 Rice Krispies for $9.90",
+        "Bought 3 Keyboard for $330.00",
+        "Subtotal: $339.90",
+        "Total (including taxes): $369.64"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Mau",
+      "email": "maumd@fb.com",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 10
+        },
+        {
+          "itemId": 14,
+          "quantity": 3
+        }
+      ],
+      "total": "369.64",
+      "createdAt": "2022-06-28T17:03:52.665Z",
+      "receipt": [
+        "Receipt for Mau with email: maumd@fb.com",
+        "Bought 10 Rice Krispies for $9.90",
+        "Bought 3 Keyboard for $330.00",
+        "Subtotal: $339.90",
+        "Total (including taxes): $369.64"
+      ]
+    }
+  ]
 }
