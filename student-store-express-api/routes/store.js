@@ -10,6 +10,13 @@ routes.get("/", (req, res) => {
   });
 });
 
+routes.get("/purchases", (req, res) => {
+  // We reverse it so its sorted by date
+  res.send({
+    purchases: Store.findPurchases().reverse(),
+  });
+});
+
 routes.get("/:productId", (req, res) => {
   const { productId } = req.params;
   res.send({

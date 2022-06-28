@@ -11,12 +11,17 @@ import ReactLoading from "react-loading";
 
 import { useState, useEffect } from "react";
 import { baseUrl } from "../../util/constants";
+import PurchaseHistory from "../PurchaseHistory/PurchaseHistory";
 
 export default function App() {
   // State
 
   const [products, setProducts] = useState([]);
   const [apiProducts, setApiProducts] = useState([]);
+
+  const [purchases, setPurchases] = useState([]);
+  const [apiPurchases, setApiPurchases] = useState([]);
+
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -30,14 +35,13 @@ export default function App() {
 
   useEffect(() => {
     getProducts();
+    getPurchases();
   }, []);
 
   const getProducts = async () => {
     setIsFetching(true);
     try {
-      console.log(baseUrl);
       const productsData = await axios.get(`${baseUrl}/store`);
-      console.log(productsData);
       setApiProducts(productsData.data.products);
       setProducts(productsData.data.products);
     } catch {
@@ -46,6 +50,19 @@ export default function App() {
     setIsFetching(false);
   };
 
+  const getPurchases = async () => {
+    setIsFetching(true);
+
+    try {
+      const purchasesData = await axios.get(`${baseUrl}/store/purchases`);
+      setApiPurchases(purchasesData.data.purchases);
+      setPurchases(purchasesData.data.purchases);
+    } catch {
+      setError(true);
+    }
+
+    setIsFetching(false);
+  };
   const handleOnToggle = () => {
     setIsOpen(!isOpen);
   };
@@ -206,6 +223,10 @@ export default function App() {
                         handleRemoveItemToCart={handleRemoveItemFromCart}
                       />
                     }
+                  />
+                  <Route
+                    path="purchases"
+                    element={<PurchaseHistory purchases={purchases} />}
                   />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
