@@ -6,11 +6,7 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 Deployed Website: [here](https://tdd-student-store-starter.vercel.app/)
 
-
-
 https://user-images.githubusercontent.com/74751751/175643819-b33625d2-9aad-4e28-889d-09f1e2658835.mp4
-
-
 
 ### Application Features
 
@@ -31,8 +27,8 @@ https://user-images.githubusercontent.com/74751751/175643819-b33625d2-9aad-4e28-
 
 - [x] User can click in the top navigation bar to scroll to the relevant section.
 - [x] User sees a "not found" display when searching for a nonexistent product.
-- [ ] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
-- [ ] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
+- [x] Create an endpoint for fetching all orders in the database, and an endpoint for serving an individual order based on its id.
+- [x] Build a page in the UI that displays the list of all past orders and lets the user click on any individual order to take them to a more detailed page of the transaction.
 - [ ] Allow users to use an input to filter orders by the email of the person who placed the order.
 
 ### Passing Automated Tests

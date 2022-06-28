@@ -148,145 +148,6 @@
   "purchases": [
     {
       "id": 1,
-      "name": "Mau",
-      "email": "maumd@fb.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 10
-        },
-        {
-          "itemId": 4,
-          "quantity": 3
-        }
-      ],
-      "total": "21.37",
-      "createdAt": "2022-06-28T17:01:03.589Z",
-      "receipt": [
-        "Receipt for Mau with email: maumd@fb.com",
-        "Bought 10 Rice Krispies for $9.90",
-        "Bought 3 Coconut Water for $9.75",
-        "Subtotal: $19.65",
-        "Total (including taxes): $21.37"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Mau",
-      "email": "maumd@fb.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 10
-        },
-        {
-          "itemId": 4,
-          "quantity": 3
-        }
-      ],
-      "total": "21.37",
-      "createdAt": "2022-06-28T17:01:14.365Z",
-      "receipt": [
-        "Receipt for Mau with email: maumd@fb.com",
-        "Bought 10 Rice Krispies for $9.90",
-        "Bought 3 Coconut Water for $9.75",
-        "Subtotal: $19.65",
-        "Total (including taxes): $21.37"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Mau",
-      "email": "maumd@fb.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 10
-        },
-        {
-          "itemId": 14,
-          "quantity": 3
-        }
-      ],
-      "total": "369.64",
-      "createdAt": "2022-06-28T17:02:17.704Z",
-      "receipt": [
-        "Receipt for Mau with email: maumd@fb.com",
-        "Bought 10 Rice Krispies for $9.90",
-        "Bought 3 Keyboard for $330.00",
-        "Subtotal: $339.90",
-        "Total (including taxes): $369.64"
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Mau",
-      "email": "maumd@fb.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 10
-        },
-        {
-          "itemId": 14,
-          "quantity": 3
-        }
-      ],
-      "total": "369.64",
-      "createdAt": "2022-06-28T17:03:45.419Z",
-      "receipt": [
-        "Receipt for Mau with email: maumd@fb.com",
-        "Bought 10 Rice Krispies for $9.90",
-        "Bought 3 Keyboard for $330.00",
-        "Subtotal: $339.90",
-        "Total (including taxes): $369.64"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Mau",
-      "email": "maumd@fb.com",
-      "order": [
-        {
-          "itemId": 1,
-          "quantity": 10
-        },
-        {
-          "itemId": 14,
-          "quantity": 3
-        }
-      ],
-      "total": "369.64",
-      "createdAt": "2022-06-28T17:03:52.665Z",
-      "receipt": [
-        "Receipt for Mau with email: maumd@fb.com",
-        "Bought 10 Rice Krispies for $9.90",
-        "Bought 3 Keyboard for $330.00",
-        "Subtotal: $339.90",
-        "Total (including taxes): $369.64"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "maumd@fb.com",
-      "email": "mau",
-      "order": [
-        {
-          "itemId": 3,
-          "quantity": 3
-        }
-      ],
-      "total": "9.75",
-      "createdAt": "2022-06-28T17:21:47.394Z",
-      "receipt": [
-        "Receipt for maumd@fb.com with email: mau",
-        "Bought 3 Cinnamon Rolls for $8.97",
-        "Subtotal: $8.97",
-        "Total (including taxes): $9.75"
-      ]
-    },
-    {
-      "id": 7,
       "name": "maumd@fb.com",
       "email": "mau2",
       "order": [
@@ -307,6 +168,40 @@
           "Bought 1 Rice Krispies for $0.99",
           "Subtotal: $0.99",
           "Total (including taxes): $1.08"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "angel@fb.com",
+      "email": "Angel",
+      "order": [
+        {
+          "itemId": 4,
+          "quantity": 1
+        },
+        {
+          "itemId": 3,
+          "quantity": 1
+        },
+        {
+          "itemId": 2,
+          "quantity": 1
+        }
+      ],
+      "total": "8.42",
+      "createdAt": "2022-06-28T20:48:26.626Z",
+      "receipt": {
+        "userInfo": {
+          "name": "angel@fb.com",
+          "email": "Angel"
+        },
+        "lines": [
+          "Bought 1 Coconut Water for $3.25",
+          "Bought 1 Cinnamon Rolls for $2.99",
+          "Bought 1 Flamin Hot Cheetos for $1.50",
+          "Subtotal: $7.74",
+          "Total (including taxes): $8.42"
         ]
       }
     }

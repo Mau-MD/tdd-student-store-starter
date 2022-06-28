@@ -12,6 +12,7 @@ import ReactLoading from "react-loading";
 import { useState, useEffect } from "react";
 import { baseUrl } from "../../util/constants";
 import PurchaseHistory from "../PurchaseHistory/PurchaseHistory";
+import PurchaseDetails from "../PurchaseDetails/PurchaseDetails";
 
 export default function App() {
   // State
@@ -171,6 +172,14 @@ export default function App() {
     setProducts(finalFilteredItems);
   };
 
+  const handlePurchaseSearch = (query) => {
+    const filteredItems = apiPurchases.filter((purchase) =>
+      purchase.email.toLowerCase().includes(query.toLowerCase())
+    );
+
+    setPurchases(filteredItems);
+  };
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -226,7 +235,16 @@ export default function App() {
                   />
                   <Route
                     path="purchases"
-                    element={<PurchaseHistory purchases={purchases} />}
+                    element={
+                      <PurchaseHistory
+                        purchases={purchases}
+                        handlePurchaseSearch={handlePurchaseSearch}
+                      />
+                    }
+                  />
+                  <Route
+                    path="purchases/:purchaseId"
+                    element={<PurchaseDetails />}
                   />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
