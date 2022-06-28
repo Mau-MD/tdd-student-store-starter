@@ -43,9 +43,7 @@ routes.post("/", (req, res, next) => {
   // Check for duplicates and validate the data
   const productsIdSet = new Set();
   let totalCost = 0;
-  const receipt = [
-    `Receipt for ${body.user.name} with email: ${body.user.email}`,
-  ];
+  const receipt = [];
 
   for (const product of req.body.shoppingCart) {
     // Check if it has valid fields
@@ -91,7 +89,13 @@ routes.post("/", (req, res, next) => {
     order: body.shoppingCart,
     total: totalTaxCost.toFixed(2),
     createdAt: new Date().toISOString(),
-    receipt,
+    receipt: {
+      userInfo: {
+        name: body.user.name,
+        email: body.user.email,
+      },
+      lines: receipt,
+    },
   };
 
   Store.create(orderObject);

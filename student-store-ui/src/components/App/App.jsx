@@ -35,7 +35,9 @@ export default function App() {
   const getProducts = async () => {
     setIsFetching(true);
     try {
+      console.log(baseUrl);
       const productsData = await axios.get(`${baseUrl}/store`);
+      console.log(productsData);
       setApiProducts(productsData.data.products);
       setProducts(productsData.data.products);
     } catch {

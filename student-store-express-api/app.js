@@ -4,9 +4,11 @@ const app = express();
 const store = require("./routes/store");
 const { NotFoundError } = require("./utils/errors");
 const morgan = require("morgan");
+const cors = require("cors");
 
 app.use(express.json());
 app.use(morgan("tiny"));
+app.use(cors());
 app.use("/store", store);
 
 app.get("/", (req, res) => {

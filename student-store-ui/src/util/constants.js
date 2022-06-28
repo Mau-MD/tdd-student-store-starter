@@ -9,4 +9,4 @@ export const categories = [
 export const baseUrl =
   process.env.NODE_ENV === "production"
     ? "https://codepath-store-api.herokuapp.com"
-    : "localhost:3001";
+    : "http://localhost:3001";

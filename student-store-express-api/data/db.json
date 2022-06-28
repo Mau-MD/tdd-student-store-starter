@@ -265,6 +265,50 @@
         "Subtotal: $339.90",
         "Total (including taxes): $369.64"
       ]
+    },
+    {
+      "id": 6,
+      "name": "maumd@fb.com",
+      "email": "mau",
+      "order": [
+        {
+          "itemId": 3,
+          "quantity": 3
+        }
+      ],
+      "total": "9.75",
+      "createdAt": "2022-06-28T17:21:47.394Z",
+      "receipt": [
+        "Receipt for maumd@fb.com with email: mau",
+        "Bought 3 Cinnamon Rolls for $8.97",
+        "Subtotal: $8.97",
+        "Total (including taxes): $9.75"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "maumd@fb.com",
+      "email": "mau2",
+      "order": [
+        {
+          "itemId": 1,
+          "quantity": 1
+        }
+      ],
+      "total": "1.08",
+      "createdAt": "2022-06-28T17:24:02.620Z",
+      "receipt": {
+        "userInfo": {
+          "name": "maumd@fb.com",
+          "email": "mau2"
+        },
+        "lines": [
+          "Receipt for maumd@fb.com with email: mau2",
+          "Bought 1 Rice Krispies for $0.99",
+          "Subtotal: $0.99",
+          "Total (including taxes): $1.08"
+        ]
+      }
     }
   ]
 }
