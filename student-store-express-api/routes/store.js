@@ -24,6 +24,13 @@ routes.get("/:productId", (req, res) => {
   });
 });
 
+routes.get("/purchases/:purchaseId", (req, res) => {
+  const { purchaseId } = req.params;
+  res.send({
+    purchase: Store.findPurchaseById(parseInt(purchaseId)),
+  });
+});
+
 routes.post("/", (req, res, next) => {
   const body = req.body;
 

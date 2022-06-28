@@ -14,6 +14,11 @@ class Store {
     return products.filter((product) => product.id === id)[0];
   }
 
+  static findPurchaseById(id) {
+    const purchases = storage.get("purchases");
+    return purchases.filter((purchase) => purchase.id === id)[0];
+  }
+
   static create(newProduct) {
     const currentProducts = storage.get("purchases");
     storage.set("purchases", [...currentProducts, newProduct]);
