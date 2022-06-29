@@ -6,7 +6,8 @@ Selling merchandise in the modern era requires digital solutions. For this proje
 
 Deployed Website: [here](https://tdd-student-store-starter.vercel.app/)
 
-https://user-images.githubusercontent.com/74751751/175643819-b33625d2-9aad-4e28-889d-09f1e2658835.mp4
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/74751751/176492013-6401eb2b-b37b-478a-8d31-6b60f7320247.gif)
+
 
 ### Application Features
 
@@ -264,10 +265,10 @@ The following specifications were met on the Express backend and the React front
     - [x] The `shoppingCart` field should contain the user's order.
       - [x] This should be an array of objects.
       - [x] Each object in the array should have two fields:
-        <!-- - [ ] The `item` field should store an object of the item being purchased -->
-        - [ ] The `itemId` field should store the `id` of the item being purchased
-        - [ ] The `quantity` field should store a number representing how many of that item the user is purchasing.
-    - [ ] The `user` field should contain the name and email of the person placing the order.
+        <!-- - [x] The `item` field should store an object of the item being purchased -->
+        - [x] The `itemId` field should store the `id` of the item being purchased
+        - [x] The `quantity` field should store a number representing how many of that item the user is purchasing.
+    - [x] The `user` field should contain the name and email of the person placing the order.
     - [x] When either the `shoppingCart` or `user` fields are missing, it should throw a `400` error.
     - [x] If there are duplicate items in the `shoppingCart`, it should throw a `400` error.
     - [x] If either the `quantity` or `itemId` field is missing for any of the items in the `shoppingCart`, a `400` error should be thrown.
